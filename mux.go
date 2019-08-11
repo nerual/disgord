@@ -16,5 +16,7 @@ func init() {
 	Session.AddHandler(Router.OnMessageCreate)
 
 	// Register the build-in help command.
+	Router.Prefix = "!"
 	Router.Route("help", "Display this message.", Router.Help)
+	Router.Route("lizzo", "Do a cool Lizzo thing.", Router.Lizzo)
 }

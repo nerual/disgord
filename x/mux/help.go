@@ -14,9 +14,9 @@ import (
 func (m *Mux) Help(ds *discordgo.Session, dm *discordgo.Message, ctx *Context) {
 
 	// Set command prefix to display.
-	cp := ""
+	cp := "!"
 	if ctx.IsPrivate {
-		cp = ""
+		cp = "!"
 	} else if ctx.HasPrefix {
 		cp = m.Prefix
 	} else {
