@@ -8,7 +8,8 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
-//  Lizzo To use this function it must first be
+// Lizzo ...
+// To use this function it must first be
 // registered with the Mux.Route function.
 func (m *Mux) Lizzo(ds *discordgo.Session, dm *discordgo.Message, ctx *Context) {
 
@@ -43,7 +44,7 @@ func (m *Mux) Lizzo(ds *discordgo.Session, dm *discordgo.Message, ctx *Context) 
 		cmdmap[v.Pattern] = v
 
 		// help and about are added separately below.
-		if v.Pattern == "help" || v.Pattern == "about" {
+		if v.Pattern == "lizzo" || v.Pattern == "Lizzo" {
 			continue
 		}
 
