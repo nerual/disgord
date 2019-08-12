@@ -4,7 +4,11 @@ package main
 // to the Disgord bot. This is an optional addition however it is included
 // by default to demonstrate how to extend the Disgord bot.
 
-import "github.com/bwmarrin/disgord/x/mux"
+import (
+	"fmt"
+
+	"github.com/nerual/pixelbot/x/mux"
+)
 
 // Router is registered as a global variable to allow easy access to the
 // multiplexer throughout the bot.
@@ -17,6 +21,9 @@ func init() {
 
 	// Register the build-in help command.
 	Router.Prefix = "!"
+	fmt.Printf("Your new Mux Router is: %#v\n", Router)
 	Router.Route("help", "Display this message.", Router.Help)
+	fmt.Printf("Router is: %#v\n", Router)
+
 	Router.Route("lizzo", "Do a cool Lizzo thing.", Router.Lizzo)
 }
