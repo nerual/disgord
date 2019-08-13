@@ -17,7 +17,7 @@ cd $GOPATH/src/github.com/nerual/pixelbot
 go build
 ./pixelbot -t BOT_AUTH_TOKEN
 ```
-Ask nerual for the token.
+We don't currently have CI set up, so file a PR against your branch and I'll grab the update and run the bot again manually.
 
 ## Documentation
 
